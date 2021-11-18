@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "baseUrl": "src",
+    "module": "commonjs",
+    "types": ["jest","node"],
+    "emitDecoratorMetadata": true,
+    "target": "es2015",
+    "paths": {
+      "@wv/loans-dto": ["../../../libs/loans-dto/src/index.ts"],
+      "@wv/loans-models": ["../../../libs/loans-models/src/index.ts"]
+    },
+  },
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"],
+  "include": ["**/*.ts"]
+}

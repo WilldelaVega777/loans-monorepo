@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "loans-client": "apps/loans-client",
+    "loans-client-e2e": "apps/loans-client-e2e",
+    "loans-models": "libs/loans-models",
+    "loans-server": "apps/loans-server"
+  }
+}

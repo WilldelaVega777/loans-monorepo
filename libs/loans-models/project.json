@@ -1,0 +1,23 @@
+{
+  "root": "libs/loans-models",
+  "sourceRoot": "libs/loans-models/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/loans-models/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/loans-models"],
+      "options": {
+        "jestConfig": "libs/loans-models/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

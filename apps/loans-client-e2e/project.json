@@ -1,0 +1,28 @@
+{
+  "root": "apps/loans-client-e2e",
+  "sourceRoot": "apps/loans-client-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/loans-client-e2e/cypress.json",
+        "devServerTarget": "loans-client:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "loans-client:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/loans-client-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["loans-client"]
+}
